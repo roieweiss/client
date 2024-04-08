@@ -1,0 +1,77 @@
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  table {
+    width: 100%;
+  }
+  
+  td {
+    padding: 10px;
+    /* Add padding to each table cell */
+  }
+  
+  .card {
+    position: relative;
+    width: calc(33.33% - 20px);
+    /* Adjust the width to fit three cards in one line with equal spacing */
+    height: 500px;
+    /* Increase the height of the card */
+    border: 1px solid #121212;
+    padding: 100px;
+    /* Increase the padding to add space between the card content and border */
+    margin-bottom: 100px;
+    /* Add margin at the bottom of each card for spacing */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    background-color: black;
+    background-image: url('https://www.shutterstock.com/image-photo/credit-card-on-png-background-600nw-2259495135.jpg');
+  background-size: 110%; /* Adjust the size of the background image */
+  background-position: center 50%; 
+  }
+
+  
+  .logo {
+    position: absolute;
+    top: 5px;
+    /* Adjust top position for logo */
+    right: 150px;
+    /* Adjust right position for logo */
+    width: 20px;
+    /* Set logo width */
+    height: auto;
+    /* Maintain aspect ratio */
+  }
+  
+  .details {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    text-align: center;
+    /* Center-align the card details */
+  }
+  
+  .card-number {
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    position: relative;
+    top: 20px; /* Adjust the value to move it down */
+  }
+  
+  
+  .bank-name {
+    font-size: 14px;
+    color: white;
+    position: relative;
+    top: 20px; /* Adjust the value to move it down */
+  }
+  
+  .user-name {
+    font-size: 14px;
+    color: white;
+    position: relative;
+    top: 20px; /* Adjust the value to move it down */
+  }
