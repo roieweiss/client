@@ -28,7 +28,7 @@ const Card = ({ cardNumber, bankName, userName }) => {
         <p className="bank-name">{bankName}</p>
         <p className="user-name">{userName}</p>
       </div>
-      {showForm && <LimitCardForm onClose={handleCloseForm} />}
+      {showForm && <LimitCardForm card={cardNumber} onClose={handleCloseForm} />}
     </div>
   );
 };

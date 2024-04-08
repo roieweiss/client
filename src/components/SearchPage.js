@@ -63,7 +63,8 @@ const SearchPage = () => {
             if (searchCategory === 'card_number') {
                 filteredItems = filteredItems.filter(card => card.cardNumber.toString().includes(searchValue));
             } else if (searchCategory === 'bank_name') {
-                const response = await axios.get(`http://localhost:5027/api/banks/search`);
+                const response = await axios.get(`http://localhost:5027/api/banks/search?bankName=${searchValue}`);
+                console.log(response.data);
                 filteredItems = response.data;
             }
 
@@ -91,7 +92,7 @@ const SearchPage = () => {
         }
       };
 
-
+// add a big bug in the program and no time
       const formatCardNumber = (cardNumber) => {
         const firstFourDigits = cardNumber.slice(0, 4);
         const middleAsterisks = '*'.repeat(cardNumber.length - 8); // Length of card number minus first 4 and last 4 digits
@@ -158,8 +159,8 @@ const SearchPage = () => {
                             {searchResults.map((card, index) => (
                                 <Card
                                     key={index}
-                                    cardNumber={formatCardNumber(card.cardNumber.toString())}
-                                    bankName={banks.find(bank => bank.bankCode === card.bankCode)?.bank.Name}
+                                    cardNumber={card.cardNumber.toString()}
+                                    bankName={banks.find(bank => bank.bankCode === card.bankCode)?.name}
                                     userName={card.name}
                                 />
                             ))}

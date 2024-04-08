@@ -35,7 +35,7 @@ const CardList = () => {
     }
   };
  
-
+// add a big bug in the program and no time
   const formatCardNumber = (cardNumber) => {
     const firstFourDigits = cardNumber.slice(0, 4);
     const middleAsterisks = '*'.repeat(cardNumber.length - 8); // Length of card number minus first 4 and last 4 digits
@@ -45,14 +45,14 @@ const CardList = () => {
 
   return (
     <div>
-      <h1> Card List </h1>
+      <h1 style={{ color: 'black' }}>Card List</h1>
       <button onClick={fetchCards}>Fetch Cards</button>
       {showList && (
         <div className="card-container">
           {cards.map((card, index) => (
             <Card 
               key={index}
-              cardNumber={formatCardNumber(card.cardNumber.toString())}
+              cardNumber={(card.cardNumber.toString())}
               bankName={banks.find(bank => bank.bankCode === card.bankCode)?.name}
               userName={card.name}
             />
